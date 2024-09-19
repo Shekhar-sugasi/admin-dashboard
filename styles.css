@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --blue: #1992d4;
+    --orange: #f0b429;
+    --grey: #e2e8f0;
+    --white: #fff;
+    --secondary-text: #636363;
+    --primary-text: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", system-ui;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    height: 100vh;
+}
+
+.profilePic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url("assets/user-logo.webp");
+    background-color: var(--orange);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 15px 20px;
+    gap: 60px;
+}
+
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 700;
+    gap: 8px;
+}
+
+.sidebar .logo svg {
+    width: 50px;
+    fill: var(--white);
+}
+
+.sidebar ul {
+    line-height: 2;
+}
+
+.sidebar ul li {
+    display: flex;
+    list-style-type: none;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor: pointer;
+    gap: 22px;
+    margin-left: 12px;
+    margin-bottom: 10px;
+}
+
+.sidebar ul li svg {
+    width: 22px;
+    fill: var(--white);
+}
+
+.main {
+    background-color: var(--grey);
+}
+
+.main .header {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 15px 25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+    background-color: #fff;
+    gap: 15px;
+}
+
+.main .header .profilePic.Big {
+    height: 75px;
+    width: 75px;
+}
+
+.main .header > div:nth-child(1) {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.main .header .searchbar {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.main .header .searchbar svg {
+    width: 22px;
+    fill: var(--primary-text);
+}
+
+.main .header .searchbar input {
+    width: 100%;
+    padding: 5px 10px;
+    background-color: var(--grey);
+    border: 1px solid var(--grey);
+    border-radius: 20px;
+    outline: none;
+}
+
+.main .header .profileIcons {
+    flex: 1;
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    font-size: 18px;
+    font-weight: 600;
+    gap: 25px;
+}
+
+.main .header .profileIcons svg {
+    width: 22px;
+    fill: var(--primary-text);
+}
+
+.main .header .profileIcons span {
+    display: flex;
+    align-items: center;
+}
+
+.main .header > div:nth-child(2) {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 15px;
+}
+
+.main .header > div:nth-child(2) > div:nth-child(1) {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+}
+
+.main .header > div:nth-child(2) .profilePic.Big {
+    justify-self: right;
+    grid-column: 1/2px;
+    grid-row: 1/3;
+    margin-right: 20px;
+}
+
+.main .header > div:nth-child(2) .tagline {
+    margin-top: auto;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.main .header > div:nth-child(2) .username {
+    margin-bottom: auto;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.main .header > div:nth-child(2) > div:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    padding-left: 30px;
+    gap: 20px;
+}
+
+.main .header > div:nth-child(2) .btn {
+    background-color: var(--blue);
+    padding: 12px;
+    border-radius: 25px;
+    text-align: center;
+    color: var(--white);
+    font-weight: 600;
+    height: 50px;
+    width: 120px;
+}
+
+.main .content {
+    padding: 35px 20px;
+    z-index: -1;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 25px;
+}
+
+.main .content h2.title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.main .content h3.title {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.main .content .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main .content .projects > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.main .content .projects .card {
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+}
+
+.main .content .projects .card > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--white);
+    border-left: 6px solid var(--orange);
+    padding: 25px;
+}
+
+.main .content .projects .card > div p {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.main .content .projects .card > div .options {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 25px;
+    gap: 20px;
+}
+
+.main .content .projects .card > div .options svg {
+    fill: var(--primary-text);
+    width: 22px;
+}
+
+.main .content .announcementsNTrending {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.main .content .announcementsNTrending > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main .content .announcementsNTrending .announcements {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 12px;
+    padding: 12px 25px;
+    height: 330px;
+}
+
+.main .content .announcementsNTrending .announcements h3.title {
+    font-size: 14px;
+}
+
+.main .content .announcementsNTrending .announcements > div {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--grey);
+}
+
+.main .content .announcementsNTrending .announcements > div p {
+    font-size: 12px;
+}
+
+.main .content .announcementsNTrending .announcements > div:last-child {
+    border-bottom: none;
+}
+
+.main .content .announcementsNTrending .trending {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 25px;
+    gap: 20px;
+}
+
+.main .content .announcementsNTrending .trending > div {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    font-size: 14px;
+}
+
+.main .content .announcementsNTrending .trending > div > div {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    margin-right: 15px;
+}
+
+.main .content .announcementsNTrending .trending h3.title {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.main .content .announcementsNTrending .trending p {
+    color: var(--secondary-text);
+}
